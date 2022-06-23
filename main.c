@@ -1,6 +1,6 @@
 
 
-#include <16f628A.h>     // Kullanýlacak denetleyicinin baþlýk dosyasý tanýtýlýyor.
+#include <16f628A.h>   
 #include <stdbool.h>
 #FUSES NOWDT                    //No Watch Dog Timer
 #FUSES INTRC_IO                 //Internal RC Osc, no CLKOUT
@@ -16,7 +16,7 @@
 #define Q4 pin_b1
 
 
-/********* ANA PROGRAM FONKSÝYONU********/
+
  int number;
  
  int sifre[4]={0,0,0,0};
@@ -24,8 +24,8 @@
 int counter=0;
 void main ()
 {
-set_tris_a(0x00);    // RA0 ucu çýkýþ olarak ayarlandý.
-set_tris_b(0xff);    // RB0 portu tümüyle giriþ olarak ayarlandý.
+set_tris_a(0x00);    
+set_tris_b(0xff);    
 while(input(StD));
 
    while(TRUE)
